@@ -3,18 +3,18 @@ from django.db import models
 
 class SquirrelViewing(models.Model):
     Longitude  = models.FloatField(
-            help_text = _('Longitude'),)
+            help_text = ('Longitude'),)
 
     Latitude = models.FloatField(
-            help_text = _('Latitude'),)
+            help_text = ('Latitude'),)
 
     Unique_Squirrel_Id = models.CharField(
-            help_text = _('Unique Squirrel Identifier'),
+            help_text = ('Unique Squirrel Identifier'),
             max_length = 50,
             )
 
     Hectare = models.CharField(
-            help_text = _('Hectare of Sighting'),
+            help_text = ('Hectare of Sighting'),
             max_length = 50,
             )
 
@@ -27,19 +27,18 @@ class SquirrelViewing(models.Model):
             )
 
     Shift = models.CharField(
-            help_text = _('Sighting: Morning or Night?'),
+            help_text = ('Sighting: Morning or Night?'),
             max_length=50,
             choices=SIGHT_TIME,
             blank=True)
     
     Date = models.DateField(
-            help_text = _('Date in yyyy-mm-dd'),
+            help_text = ('Date in yyyy-mm-dd'),
             null = True,
             blank=True)
 
     Hectare = models.IntegerField(
-            help_text = _('Hectare Squirrel Number'),
-            max_length = 50
+            help_text = ('Hectare Squirrel Number'),
             )
     
     Adult = 'Adult'
@@ -55,7 +54,7 @@ class SquirrelViewing(models.Model):
 
 
     Age = models.CharField(
-            help_text = _('Age of Squirrel'),
+            help_text = ('Age of Squirrel'),
             max_length=50,
             choices = AGE_CHOICE,
             blank = True
@@ -73,7 +72,7 @@ class SquirrelViewing(models.Model):
 
     
     Primary_Fur_Color = models.CharField(
-            help_text = _('Color of Fur'),
+            help_text = ('Color of Fur'),
             max_length=50,
             choices = COLOR,
             blank = True
@@ -88,45 +87,45 @@ class SquirrelViewing(models.Model):
             )
     
     Location =  models.CharField(
-            help_text = _('Location'),
+            help_text = ('Location'),
             max_length=100,
             choices = LOCATION,
             blank = True
             )
 
     Specific_Location = models.CharField(
-            help_text = _('Specific notes to this location'),
+            help_text = ('Specific notes to this location'),
             max_length=100,
             blank = True,
             )
 
     Running = models.NullBooleanField(
-            help_text = _('Running'),
+            help_text = ('Running'),
             blank=True,
     )
     
     Chasing = models.NullBooleanField(
-            help_text = _('Chasing'),
+            help_text = ('Chasing'),
             blank=True,
     )
 
     Climbing = models.NullBooleanField(
-            help_text = _('Climbing'),
+            help_text = ('Climbing'),
             blank=True,
     )
 
     Eating = models.NullBooleanField(
-            help_text = _('Eating'),
+            help_text = ('Eating'),
             blank=True,
     )
 
     Foraging = models.NullBooleanField(
-            help_text = _('Foraging'),
+            help_text = ('Foraging'),
             blank=True,
     )
 
     Other_Activities = models.CharField(
-        help_text = _('Other Activities'),
+        help_text = ('Other Activities'),
         max_length = 128,
         null = True,
         blank = True
@@ -134,45 +133,44 @@ class SquirrelViewing(models.Model):
 
     
     Kuks = models.NullBooleanField(
-            help_text = _('Kuks'),
+            help_text = ('Kuks'),
             blank=True,
     )
 
     Quaas = models.NullBooleanField(
-            help_text = _('Quaas'),
+            help_text = ('Quaas'),
             blank=True,
     )
 
     Moans = models.NullBooleanField(
-            help_text = _('Moans'),
+            help_text = ('Moans'),
             blank=True,
     )
 
     Tail_Flags = models.NullBooleanField(
-            help_text = _('Tail_Flags'),
+            help_text = ('Tail_Flags'),
             blank=True,
     )
 
     Tail_Twitches = models.NullBooleanField(
-            help_text = _('Tail_Twitches'),
+            help_text = ('Tail_Twitches'),
             blank=True,
     )
 
     Approaches = models.NullBooleanField(
-            help_text = _('Approaches'),
+            help_text = ('Approaches'),
             blank=True,
     )
 
     Indifferent = models.NullBooleanField(
-            help_text = _('Indifferent'),
+            help_text = ('Indifferent'),
             blank=True,
     )
     
     Runs_From = models.NullBooleanField(
-            help_text = _('Runs_From'),
+            help_text = ('Runs_From'),
             blank=True,
     )
-(END)
 
 
 
