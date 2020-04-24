@@ -5,10 +5,10 @@ import datetime
 
 
 class Command(BaseCommand):
-    def add(self,parser):
+    def add_arguments(self,parser):
         parser.add_argument('squirrel_csv')
 
-    def open_fp(self, *args, **kwargs):
+    def handle(self, *args, **kwargs):
         with open(options['squirrel_csv']) as fp:
             csv = csv.DictReader(fp)
             csv_data  = list(csv)
