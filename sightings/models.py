@@ -28,7 +28,7 @@ class SquirrelViewing(models.Model):
 
     Shift = models.CharField(
             help_text = _('Sighting: Morning or Night?'),
-            max_length:50,
+            max_length=50,
             choices=SIGHT_TIME,
             blank=True)
     
