@@ -1,2 +1,7 @@
 __pycache__/
 *.swp
+.env
+.env.example
+.env.local
+.env.staging
+env/
