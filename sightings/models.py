@@ -32,7 +32,6 @@ class SquirrelViewing(models.Model):
             null = True,
             blank=True)
 
-
     Adult = 'Adult'
     Juvenile = 'Juvenile'
     Unknown = '?'
@@ -52,9 +51,5 @@ class SquirrelViewing(models.Model):
             blank = True
             )
     
-
-
-    
-
 
 # Create your models here.

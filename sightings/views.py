@@ -13,9 +13,4 @@ def homepage(request):
 
 
 
-
-
-
-
-
 # Create your views here.
