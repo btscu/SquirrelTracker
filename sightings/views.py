@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 
-def index(request):
-    return HttpResponse('Squirrel Sightings')
-
+def homepage(request):
+    return render(request, 'sightings.html')
 # Create your views here.
