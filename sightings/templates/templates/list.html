@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang='en'>
+        <head>
+                <title>List of Squirrel Sightings</title>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        </head>
+        <body>
+<style>
+      body {
+        padding-left: 10px; padding-right: 10px;
+      }
+</style>
+                <p>
+                <br>
+                <hr>
+                </p>
+                <p>
+                </p>
+                <br>
+                <div>
+                <table class="table">
+                        <div class="alert alert-dark text-center" role="alert">
+                                <h5><strong> 2018 Squirrel Sightings </strong></h5>
+                        </div>
+                        <thead class = "thead-dark">
+                                <tr>
+                                        <th scope = "col">Unique Squirrel Id</th>
+                                        <th scope = "col">Longitude</th>
+                                        <th scope = "col">Latitude</th>
+                                        <th scope = "col">Date</th>
+                                        <th scope = "col">Shift</th>
+                                </tr>
+                        </thead>
+
+                        <tbody>
+                        {% for squirrel in squirrels %}
+                                <tr>
+                                        <td><a href="{{squirel.unique_squirrel_id}}/">{{ squirrel.unique_squirrel_id }}</a></td>
+                                        <td>{{ squirrel.longitude }}</td>
+                                        <td>{{ squirrel.latitude }}</td>
+                                        <td>{{ squirrel.date }}</td>
+                                        <td>{{ squirrel.shift }}</td>
+                                </tr>
+                        {% endfor %}
+                        </tbody>
+                </table>
+                </div>
+                <br>
+                <br>
+        </body>
+</html>
+

@@ -3,13 +3,30 @@ from django.http import HttpResponse
 from .models import SquirrelViewing
 from .modelform import ViewForm
 
-
 # def index(request):
 #    return HttpResponse('Squirrel Sightings')
 
 
 def homepage(request):
     return render(request,'templates/home.html')
+
+
+def squirrel_list(request):
+    squirrels = SquirrelViewing.objects.all()
+    info = ['Unique_Squirrel_Id', 'Longitude', 'Latitude', 'Date', 'Shift']
+    context = {
+            'squirrels':squirrels
+            }
+
+    return render(request, 'templates/list.html', context)
+
+
+
+
+def specific_squirrel(request,Unique_Squirrel_Id):
+    specific_squirrel  = SquirrelViewing.objects.filter(unique_squirrel_id = Unique_Squirrel_Id)
+    return render(request, 'sightings/specific_squirrel.html')
+
 
 
 

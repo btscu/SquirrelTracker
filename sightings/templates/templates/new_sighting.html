@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+        <head>
+                <title>Specific Squirrel Sighting</title>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+ integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        </head>
+        <body>
+<style>body{padding-left:20px; padding-right:20px;}</style>
+                <p>
+                <br>
+                <p>Specific Squirrel Sighting</p>
+                <hr>
+                <br>
+ <table class="table">
+                        <div class="alert alert-dark text-center" role="alert">
+                                <h5><strong> 2018 Squirrel Sightings </strong></h5>
+                        </div>
+                        <thead class = "thead-dark">
+                                <tr>
+                                        <th scope = "col">Unique Squirrel Id</th>
+                                        <th scope = "col">Longitude</th>
+                                        <th scope = "col">Latitude</th>
+                                        <th scope = "col">Date</th>
+                                        <th scope = "col">Shift</th>
+                                </tr>
+                        </thead>
+                        <tbody>
+                        {% for sight in sights %}
+                                <tr>
+                                        <td><a href="{{sight.Unique_Squirrel_Id}}/">{{ sight.Unique_Squirrel_Id }}</a></td>
+                                        <td>{{ sight.Longitude }}</td>
+                                        <td>{{ sight.Latitude }}</td>
+                                        <td>{{ sight.Date }}</td>
+                                        <td>{{ sight.Shift }}</td>
+                                </tr>
+                        {% endfor %}
+                        </tbody>
+                </table>
+                        <br>
+                        <br>
+                </form>
+                <br>
+        </body>
+</html>
+

@@ -27,7 +27,5 @@ class Command(BaseCommand):
                 age=dict_['Age']
          
                 ))
-
-        return sightings
-
-        #Sighting.objects.bulk_create(sightings)
+        
+        SquirrelViewing.objects.bulk_create(sightings)

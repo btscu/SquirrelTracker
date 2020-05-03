@@ -1,15 +1,15 @@
 from django.db import models
-
+from django.utils.translation import gettext as _
 
 class SquirrelViewing(models.Model):
     longitude  = models.FloatField(
-            help_text = ('Longitude'),)
+            help_text = _('Longitude'),)
 
     latitude = models.FloatField(
-            help_text = ('Latitude'),)
+            help_text = _('Latitude'),)
 
     unique_squirrel_id = models.CharField(
-            help_text = ('Unique Squirrel Identifier'),
+            help_text = _('Unique Squirrel Identifier'),
             max_length = 50,
             )
 
@@ -22,13 +22,13 @@ class SquirrelViewing(models.Model):
             )
 
     shift = models.CharField(
-            help_text = ('Sighting: Morning or Night?'),
+            help_text = _('Sighting: Morning or Night?'),
             max_length=50,
             choices=SIGHT_TIME,
             blank=True)
     
     date = models.DateField(
-            help_text = ('Date in yyyy-mm-dd'),
+            help_text = _('Date in the format yyyy-mm-dd'),
             null = True,
             blank=True)
 
@@ -45,7 +45,7 @@ class SquirrelViewing(models.Model):
 
 
     age = models.CharField(
-            help_text = ('Age of Squirrel'),
+            help_text = _('Age of Squirrel'),
             max_length=50,
             choices = AGE_CHOICE,
             blank = True
