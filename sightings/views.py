@@ -23,9 +23,9 @@ def squirrel_list(request):
 
 
 
-def specific_squirrel(request,Unique_Squirrel_Id):
-    specific_squirrel  = SquirrelViewing.objects.filter(unique_squirrel_id = Unique_Squirrel_Id)
-    return render(request, 'sightings/specific_squirrel.html')
+def specific_squirrel(request, Unique_Squirrel_Id):
+    specific_squirrel  = SquirrelViewing.objects.get(unique_squirrel_id = Unique_Squirrel_Id)
+    return render(request, 'templates/specific_squirrel.html')
 
 
 

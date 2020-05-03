@@ -26,15 +26,13 @@
                                 </tr>
                         </thead>
                         <tbody>
-                        {% for squirrel in squirrels %}
                                 <tr>
-                                        <td><a href="{{squirrel.Unique_Squirrel_Id}}/">{{ squirrel.Unique_Squirrel_Id }}</a></td>
+                                        <td><a href="{{squirrel.unique_squirrel_id}}/">{{ squirrel.unique_squirrel_id }}</a></td>
                                         <td>{{ squirrel.Longitude }}</td>
                                         <td>{{ squirrel.Latitude }}</td>
                                         <td>{{ squirrel.Date }}</td>
                                         <td>{{ squirrel.Shift }}</td>
                                 </tr>
-                        {% endfor %}
                         </tbody>
                 </table>
                         <br>
@@ -43,4 +41,3 @@
                 <br>
         </body>
 </html>
-
