@@ -13,31 +13,48 @@
                 <hr>
                 <br>
  <table class="table">
-                        <div class="alert alert-dark text-center" role="alert">
+                        <div class=  "alert alert-primary text-center"  role="alert">
                                 <h5><strong> 2018 Squirrel Sightings </strong></h5>
                         </div>
-                        <thead class = "thead-dark">
+                        <thead class = "thead-light">
                                 <tr>
                                         <th scope = "col">Unique Squirrel Id</th>
                                         <th scope = "col">Longitude</th>
                                         <th scope = "col">Latitude</th>
                                         <th scope = "col">Date</th>
                                         <th scope = "col">Shift</th>
+					<th scope = "col">Age</th>
                                 </tr>
+			<form>
+                        {{form.as_p}}
+                        <br>
+                </form>
+
+
                         </thead>
+
                         <tbody>
                                 <tr>
-                                        <td><a href="{{squirrel.unique_squirrel_id}}/">{{ squirrel.unique_squirrel_id }}</a></td>
-                                        <td>{{ squirrel.Longitude }}</td>
-                                        <td>{{ squirrel.Latitude }}</td>
-                                        <td>{{ squirrel.Date }}</td>
-                                        <td>{{ squirrel.Shift }}</td>
-                                </tr>
-                        </tbody>
+                                <tr>
+					<td>{{squirrels.unique_squirrel_id}}</td>
+					<td>{{squirrels.longitude}}</td>
+					<td>{{squirrels.latitude}}</td>
+					<td>{{squirrels.date}}</td>
+					<td>{{squirrels.shift}}</td>
+					<td>{{squirrels.age}}</td>
+                                       
+                                </tr>					
+                        <br>
+                        <br>
+                </form>
                 </table>
                         <br>
                         <br>
                 </form>
                 <br>
+		<img src="https://lh3.googleusercontent.com/proxy/WaVNzx3TpNF1uB2mnHXrsyUPGRU3RZve0tMUL_jCuhGo3cxgmE17INybxiStTsmIotSHMoBZsU2dtVEdwMzyt2ABXfY8CEI_L7zu8uk-RlksI26Vb5rgSw">
+		                <div style=font-size:12px, align = 'right'>
+                        Image courtesy of David Leatherman, entomologist</div>
+                </div>
         </body>
 </html>
