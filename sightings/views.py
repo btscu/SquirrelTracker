@@ -34,6 +34,11 @@ def specific_squirrel(request, Unique_Squirrel_Id):
     return render(request, 'templates/specific_squirrel.html', context)
 
 
-
+def squirrel_map(request):
+    squirrels = SquirrelViewing.objects.all()[100:]
+    context = {
+            'squirrels':squirrels
+            }
+    return render(request, 'templates/squirrel_map.html', context)
 
 # Create your views here.
