@@ -39,8 +39,7 @@ class SquirrelViewing(models.Model):
     AGE_CHOICE=(
             (Adult,'Adult'),
             (Juvenile, 'Juvenile'),
-            (None, ''),
-            (Unknown, '?'),
+            (None, '')
             )
 
 

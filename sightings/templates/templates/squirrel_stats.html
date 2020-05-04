@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Squirrel Stats Overview</title>
+   </head>
+   <body>
+      <h1>Squirrel Stats</h1>
+      <h2>Total number of Squirrel Sightings are {{context.Morning}}  {{context.Total}}</h2>
+      <p>Time of Sighting Characteristics</p>
+      <ul style="list-style-type:disc">
+         <li>Number spotted in Morning (AM) {{Morning}}</li>
+         <li>Percent spotted in Morning (%) {{context.percent_am}}</li>
+         <li>Number spotted at Night (PM) {{context.Night}}</li>
+         <li>Percent spotted in Night (%) {{context.percent_PM}}</li>
+      </ul>
+       <p>Age Characteristics of Squirrels</p>
+       <ul style="list-style-type:disc">
+         <li>Adults spotted {{context.number_Adult}}</li>
+         <li>Adult squirrels to total squirrels {{context.Adult_percent}}</li>
+         <li>Juveniles spotted {{context.number_Juvenile}}</li>
+         <li>Juvenile squirrels to total squirrels {{context.percent_Juvenile}</li>
+         <li>Unknown age squirrels spotted {{context.number_Unknown}}</li>
+         <li>Unknown squirrels to total squirrels {{context.Unknown_percent}</li>
+ 
+   </body>
+</html>
