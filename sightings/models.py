@@ -9,7 +9,7 @@ class SquirrelViewing(models.Model):
             help_text = _('Latitude'),)
 
     unique_squirrel_id = models.CharField(
-            help_text = _('Unique Squirrel Identifier'),
+            help_text = _('Unique Squirrel ID'),
             max_length = 50,
             )
 
@@ -23,7 +23,7 @@ class SquirrelViewing(models.Model):
 
     shift = models.CharField(
             help_text = _('Sighting: Morning or Night?'),
-            max_length=50,
+            max_length=5,
             choices=SIGHT_TIME,
             blank=True)
     
@@ -34,7 +34,6 @@ class SquirrelViewing(models.Model):
 
     Adult = 'Adult'
     Juvenile = 'Juvenile'
-    Unknown = '?'
     
     AGE_CHOICE=(
             (Adult,'Adult'),

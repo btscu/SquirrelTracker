@@ -3,24 +3,35 @@
    <head>
       <title>Squirrel Stats Overview</title>
    </head>
+   <div align = 'right'>
+           <img src="https://media.istockphoto.com/photos/squirrels-picture-id488872871?k=6&m=488872871&s=612x612&w=0&h=-WX0GPfS1cJKoF0NIWsK8suU2Iq3HiABjcwyroWp0qk=" align='right'></div>
    <body>
       <h1>Squirrel Stats</h1>
-      <h2>Total number of Squirrel Sightings are {{context.Morning}}  {{context.Total}}</h2>
-      <p>Time of Sighting Characteristics</p>
+      <h2>Total number of Squirrel Sightings are <span style="color:blue">{{context.Total}}</span></h2>
+      <p style="font-size:20px"><b>Time of Sighting Characteristics</b> </p>
       <ul style="list-style-type:disc">
-         <li>Number spotted in Morning (AM) {{Morning}}</li>
-         <li>Percent spotted in Morning (%) {{context.percent_am}}</li>
-         <li>Number spotted at Night (PM) {{context.Night}}</li>
-         <li>Percent spotted in Night (%) {{context.percent_PM}}</li>
+	      <li>Number spotted in Morning (AM):<span style="color:blue"> {{context.Morning}}</span></li>
+	 <br>
+	 <li>Percent spotted in Morning (%): <span style="color:blue">{{context.Morning_Percent}}</span></li>
+	 <br>
+	 <li>Number spotted at Night (PM): <span style="color:blue">{{context.Night}}</span></li>
+	 <br>
+	 <li>Percent spotted in Night (%): <span style="color:blue">{{context.Night_Percent}}</span></li>
       </ul>
-       <p>Age Characteristics of Squirrels</p>
+      <p style="font-size:20px"><b>Age Characteristics of Squirrels</b></p>
        <ul style="list-style-type:disc">
-         <li>Adults spotted {{context.number_Adult}}</li>
-         <li>Adult squirrels to total squirrels {{context.Adult_percent}}</li>
-         <li>Juveniles spotted {{context.number_Juvenile}}</li>
-         <li>Juvenile squirrels to total squirrels {{context.percent_Juvenile}</li>
-         <li>Unknown age squirrels spotted {{context.number_Unknown}}</li>
-         <li>Unknown squirrels to total squirrels {{context.Unknown_percent}</li>
- 
+	 <li>Adults spotted: <span style="color:blue">{{context.Adult_Number}}</span></li>
+	 <br>
+	 <li>Adult squirrels to total squirrels: <span style="color:blue">{{context.Adult_Percent}}</span></li>
+	 <br>
+	 <li>Juveniles spotted: <span style="color:blue">{{context.Juvenile_Number}}</span></li>
+	 <br>
+	 <li>Juvenile squirrels to total squirrels: <span style="color:blue">{{context.Juvenile_Percent}}</span></li>
+	 <br>
+	 <li>Unknown age squirrels spotted: <span style="color:blue">{{context.Number_Unknown}}</span></li>
+	 <br>
+	 <li>Unknown squirrels to total squirrels: <span style="color:blue">{{context.Unknown_Percent}}</span></li>
    </body>
+   <div style=font-size:12px, align = 'right'>
+                        Image courtesy of Wikimedia Commons</div>
 </html>

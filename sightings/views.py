@@ -14,11 +14,9 @@ def homepage(request):
 
 def squirrel_list(request):
     squirrels = SquirrelViewing.objects.all()
-    info = ['Unique_Squirrel_Id', 'Longitude', 'Latitude', 'Date', 'Shift']
     context = {
             'squirrels':squirrels
             }
-
     return render(request, 'templates/list.html', context)
 
 
@@ -26,7 +24,6 @@ def squirrel_list(request):
 
 def specific_squirrel(request, Unique_Squirrel_Id):
     specific_squirrel  = SquirrelViewing.objects.get(unique_squirrel_id = Unique_Squirrel_Id)
-    info = ['Unique_Squirrel_Id', 'Longitude', 'Latitude', 'Date', 'Shift', 'Age']
     form = ViewForm(instance = specific_squirrel)
     context = {
             'squirrels':specific_squirrel
@@ -35,7 +32,7 @@ def specific_squirrel(request, Unique_Squirrel_Id):
 
 
 def squirrel_map(request):
-    squirrels = SquirrelViewing.objects.all()[100:]
+    squirrels = SquirrelViewing.objects.all()[:100]
     context = {
             'squirrels':squirrels
             }
@@ -44,17 +41,22 @@ def squirrel_map(request):
 def stats(request):
     squirrels = SquirrelViewing.objects.all()
     overall_total = SquirrelViewing.objects.all().count()
-    number_AM = squirrels.filter(shift='AM').count()
-    number_PM = squirrels.filter(shift = 'PM').count()
+    number_AM = squirrels.filter(shift = 'am').count()
+    number_PM = squirrels.filter(shift = 'pm').count()
     percent_AM = number_AM/squirrels.count()
+    percent_AM = "{:.2%}".format(percent_AM)
     percent_PM = number_PM/squirrels.count()
+    percent_PM = "{:.2%}".format(percent_PM)
     number_Adult = squirrels.filter(age = 'Adult').count()
     number_Juvenile = squirrels.filter(age = 'Juvenile').count()
     number_Unknown = squirrels.filter(age = '').count()
     total_n = number_Adult + number_Juvenile + number_Unknown
     percent_Adult = number_Adult/total_n
+    percent_Adult = "{:.2%}".format(percent_Adult)
     percent_Juvenile = number_Juvenile/total_n
+    percent_Juvenile = "{:.2%}".format(percent_Juvenile)
     percent_Unknown = number_Unknown/total_n
+    percent_Unknown = "{:.2%}".format(percent_Unknown)
 
     context = {
             'Total':overall_total,
