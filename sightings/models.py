@@ -3,10 +3,14 @@ from django.utils.translation import gettext as _
 
 class SquirrelViewing(models.Model):
     longitude  = models.FloatField(
-            help_text = _('Longitude'),)
+            help_text = _('Longitude'),
+            max_length = 20,
+            )
 
     latitude = models.FloatField(
-            help_text = _('Latitude'),)
+            help_text = _('Latitude'),
+            max_length = 20,
+            )
 
     unique_squirrel_id = models.CharField(
             help_text = _('Unique Squirrel ID'),
@@ -23,7 +27,7 @@ class SquirrelViewing(models.Model):
 
     shift = models.CharField(
             help_text = _('Sighting: Morning or Night?'),
-            max_length=5,
+            max_length=2,
             choices=SIGHT_TIME,
             blank=True)
     
